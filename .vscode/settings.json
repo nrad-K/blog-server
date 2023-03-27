@@ -1,0 +1,13 @@
+{
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "GitHub Dark",
+  "go.autocompleteUnimportedPackages": true,
+  "go.buildOnSave": "off",
+  "go.diagnostic.vulncheck": "Imports",
+  "go.docsTool": "godoc",
+  "go.lintTool": "golangci-lint",
+  "go.lintOnSave": "package",
+  "go.vetOnSave": "package",
+  "go.formatTool": "goimports",
+  "editor.formatOnSave": true
+}

@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+      "golang.go",
+      "GitHub.github-vscode-theme",
+      "MS-CEINTL.vscode-language-pack-ja",
+      "TabNine.tabnine-vscode",
+      "mosapride.zenkaku",
+      "PKief.material-icon-theme",
+      "oderwat.indent-rainbow",
+      "streetsidesoftware.code-spell-checker",
+      "formulahendry.code-runner"
+  ]
+}
