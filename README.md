@@ -8,7 +8,7 @@
 
 ### ディレクトリの移動
 ```
-cd /go/src
+cd [blog-serverのpath] 
 ```
 
 ### .env ファイルの用意
