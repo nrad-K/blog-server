@@ -7,5 +7,5 @@ RUN apk update && apk add git
 COPY . /go/src
 
 RUN cd /go/src && go build -o main .
-CMD ["./main"]
+CMD ["go","run","main.go"]
 
