@@ -15,6 +15,7 @@ var (
 	dbPass     = os.Getenv("USERPASSWD")
 	dbDatabase = os.Getenv("DATABASE")
 	dbHost     = os.Getenv("HOSTNAME")
+	appPort    = os.Getenv("APP_PORT")
 )
 
 func main() {
@@ -24,10 +25,10 @@ func main() {
 		log.Fatal("fail to connect DB")
 		return
 	}
-
+	port := fmt.Sprintf(":%s", appPort)
 	router := api.NewRouter(db)
 
-	if err := router.Run(":8000"); err != nil {
+	if err := router.Run(port); err != nil {
 		panic(err)
 	}
 

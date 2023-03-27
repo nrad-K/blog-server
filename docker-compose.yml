@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 
 services:
   app:
@@ -31,7 +31,7 @@ services:
       MYSQL_PASSWORD: ${USERPASSWD}
       TZ: "Asia/Tokyo"
     ports:
-      - "3306:3306"
+      - "${DB_PORT}:${DB_PORT}"
     volumes:
       - ./db/mycnf:/etc/mysql/conf.d/my.cnf
       - db-volume:/var/lib/mysql

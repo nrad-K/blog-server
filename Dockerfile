@@ -4,11 +4,8 @@ WORKDIR /go/src
 
 RUN apk update && apk add git
 
-COPY go.mod ./go/src
-RUN go mod download
-
 COPY . /go/src
 
-RUN go build -o main .
+RUN cd /go/src && go build -o main .
 CMD ["./main"]
 
