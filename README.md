@@ -11,6 +11,13 @@
 cd [blog-serverのpath] 
 ```
 
+### golang環境構築
+※ asdfが入っていない場合は、インストールを行う
+【参考】 [asdf](https://asdf-vm.com/)
+```
+asdf install
+```
+
 ### .env ファイルの用意
 
 以下XXXXの値を任意の値を設定してください
