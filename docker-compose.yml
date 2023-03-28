@@ -14,7 +14,7 @@ services:
       MYSQL_PASSWORD: ${USERPASSWD}
       TZ: "Asia/Tokyo"
     ports:
-      - "3306:3306"
+      - "${DB_PORT}:3306"
     volumes:
       - ./db/mycnf:/etc/mysql/conf.d/my.cnf
       - db-volume:/var/lib/mysql
