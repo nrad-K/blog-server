@@ -1,23 +1,6 @@
 version: '3'
 
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: ${APP_CONTAINER_NAME}
-    volumes:
-      - .:/go/src
-    tty: true
-    env_file:
-      - ./.env
-    ports:
-      - "${APP_PORT}:${APP_PORT}"
-    depends_on:
-      - mysql
-    networks:
-      - blog-app-net
-
   mysql:
     image: mysql:5.7
     container_name: ${DB_CONTAINER_NAME}
@@ -31,7 +14,7 @@ services:
       MYSQL_PASSWORD: ${USERPASSWD}
       TZ: "Asia/Tokyo"
     ports:
-      - "${DB_PORT}:${DB_PORT}"
+      - "3306:3306"
     volumes:
       - ./db/mycnf:/etc/mysql/conf.d/my.cnf
       - db-volume:/var/lib/mysql
@@ -39,7 +22,3 @@ services:
 
 volumes:
   db-volume:
-
-networks:
-  blog-app-net:
-    driver: bridge
