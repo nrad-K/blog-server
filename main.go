@@ -14,7 +14,7 @@ var (
 	dbUser     = os.Getenv("USERNAME")
 	dbPass     = os.Getenv("USERPASSWD")
 	dbDatabase = os.Getenv("DATABASE")
-	dbHost     = os.Getenv("HOSTNAME")
+	dbHost     = os.Getenv("DB_CONTAINER_NAME")
 	appPort    = os.Getenv("APP_PORT")
 )
 
